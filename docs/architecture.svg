@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" width="880" height="560" font-family="IBM Plex Sans, Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="880" height="560" rx="14" fill="#F3F0E8"/>
+  <style>
+    .layer { font-size: 12px; letter-spacing: 1.4px; fill: #8A8577; font-weight: 600; }
+    .title { font-size: 15px; fill: #1C2420; font-weight: 600; }
+    .sub { font-size: 12.5px; fill: #5E625A; }
+    .box { fill: #FBFAF6; stroke: #D9D4C7; stroke-width: 1; }
+    .accent { fill: #FBFAF6; stroke: #1E5C45; stroke-width: 1.5; }
+    .rule { stroke: #D9D4C7; stroke-width: 1; }
+    .arrow { stroke: #1E5C45; stroke-width: 1.5; fill: none; marker-end: url(#a); }
+    .note { font-size: 11.5px; fill: #1E5C45; font-weight: 500; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#1E5C45"/>
+    </marker>
+  </defs>
+
+  <!-- Views -->
+  <text x="40" y="44" class="layer">VIEWS</text>
+  <line x1="40" y1="54" x2="840" y2="54" class="rule"/>
+  <rect x="40" y="68" width="470" height="76" rx="10" class="box"/>
+  <text x="60" y="96" class="title">Screens</text>
+  <text x="60" y="118" class="sub">Onboarding · Auth · Setup wizard · Dashboard</text>
+  <text x="60" y="134" class="sub">Connected banks · Settings · Fulfil zakat</text>
+  <rect x="530" y="68" width="310" height="76" rx="10" class="box"/>
+  <text x="550" y="96" class="title">Design system</text>
+  <text x="550" y="118" class="sub">ui_kit · CycleMeter · MoonPhase</text>
+  <text x="550" y="134" class="sub">BankCard · tokens · light/dark themes</text>
+
+  <path d="M275 146 V 196" class="arrow"/>
+  <text x="285" y="176" class="note">Obx reactive reads · user actions</text>
+
+  <!-- Controllers -->
+  <text x="40" y="214" class="layer">CONTROLLERS · GetxController</text>
+  <line x1="40" y1="224" x2="840" y2="224" class="rule"/>
+  <rect x="40" y="238" width="250" height="84" rx="10" class="accent"/>
+  <text x="60" y="266" class="title">CyclesController</text>
+  <text x="60" y="288" class="sub">Hawl engine: windows, locking,</text>
+  <text x="60" y="304" class="sub">nisab check, rollover, audit log</text>
+  <rect x="306" y="238" width="250" height="84" rx="10" class="box"/>
+  <text x="326" y="266" class="title">Accounts · Calculator</text>
+  <text x="326" y="288" class="sub">Balances, assets, income,</text>
+  <text x="326" y="304" class="sub">2.5% zakat on the window total</text>
+  <rect x="572" y="238" width="268" height="84" rx="10" class="box"/>
+  <text x="592" y="266" class="title">Auth · Setup · Settings</text>
+  <text x="592" y="288" class="sub">Localization · Theme</text>
+  <text x="592" y="304" class="sub">Created per route by Bindings</text>
+
+  <path d="M275 324 V 374" class="arrow"/>
+  <path d="M700 324 V 456" class="arrow"/>
+
+  <!-- Services -->
+  <text x="40" y="392" class="layer">SERVICES · GetxService, app-wide</text>
+  <line x1="40" y1="402" x2="560" y2="402" class="rule"/>
+  <rect x="40" y="416" width="160" height="96" rx="10" class="box"/>
+  <text x="58" y="444" class="title">StorageService</text>
+  <text x="58" y="466" class="sub">The only class that</text>
+  <text x="58" y="482" class="sub">touches disk (JSON)</text>
+  <rect x="216" y="416" width="160" height="96" rx="10" class="box"/>
+  <text x="234" y="444" class="title">GoldPriceService</text>
+  <text x="234" y="466" class="sub">Nisab in the user's</text>
+  <text x="234" y="482" class="sub">currency, overrides</text>
+  <rect x="392" y="416" width="168" height="96" rx="10" class="box"/>
+  <text x="410" y="444" class="title">BankSyncService</text>
+  <text x="410" y="466" class="sub">Account sync</text>
+  <text x="410" y="482" class="sub">(simulated in demo)</text>
+
+  <!-- Models -->
+  <text x="590" y="392" class="layer">MODELS</text>
+  <line x1="590" y1="402" x2="840" y2="402" class="rule"/>
+  <rect x="590" y="460" width="250" height="52" rx="10" class="box"/>
+  <text x="610" y="482" class="title">Cycle · Transaction · Account</text>
+  <text x="610" y="500" class="sub">Profile · Calculation · toJson/fromJson</text>
+  <path d="M562 486 H 586" class="arrow"/>
+</svg>

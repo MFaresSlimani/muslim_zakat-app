@@ -45,30 +45,7 @@ I designed and built it end to end: the zakat rules engine, the state and data l
 
 The app is organized in layers. Views stay thin, controllers own state and rules, and services own I/O.
 
-```mermaid
-flowchart TD
-    subgraph Views["Views (screens + widgets)"]
-        S[Onboarding · Auth · Setup · Dashboard<br/>Banks · Settings · Fulfil Zakat]
-        W[Design system: ui_kit, CycleMeter,<br/>MoonPhase, BankCard]
-    end
-    subgraph Controllers["Controllers (GetxController)"]
-        C1[CyclesController<br/>hawl engine]
-        C2[AccountsController]
-        C3[ZakatCalculatorController]
-        C4[Auth · Setup · Settings<br/>Localization · Theme]
-    end
-    subgraph Services["Services (GetxService, app-wide)"]
-        SS[StorageService<br/>JSON persistence]
-        GP[GoldPriceService<br/>nisab pricing]
-        BS[BankSyncService]
-    end
-    M[(Models<br/>Cycle · Transaction · Account<br/>Profile · Calculation)]
-    S --> W
-    S -- "Obx reactive reads" --> Controllers
-    Controllers --> Services
-    Controllers --> M
-    Services --> M
-```
+<p align="center"><img src="docs/architecture.svg" width="820" alt="Architecture: views read reactive state from controllers; controllers use app-wide services and models"></p>
 
 ```
 lib/
